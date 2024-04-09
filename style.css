@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  width: 700px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  background-color: #D0D8FF;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+li {
+  list-style: none;
+}
+
+main input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.checkmark:hover {
+  cursor: pointer;
+}
+
+.tasksCheckList input:checked ~ .checkmark {
+  background-color: #4bda12;
+}
+
+
+.border-r {
+  border-radius: 20px;
+  border: 1px solid black;
+}
+
+.titleTasks {
+  padding: 20px;
+  font-weight: 400;
+}
+
+.tasksAll {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+}
+
+.tasksAll .tasksMine {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.tasksAll .tasksMine .tasksCheckList li{
+  position: relative;
+  padding: 10px 50px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 40px 0;
+  background-color: #D9D9D9;
+}
