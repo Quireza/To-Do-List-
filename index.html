@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 <body>
 
@@ -16,22 +17,39 @@
     <h1 class="titleTasks">Tasks</h1>
 
     <div class="tasksAll">
+
+      <!-- PLACE FOR MY TASKS -->
       <div class="tasksMine border-r">
         <h2>My Tasks</h2>
 
         <div class="tasksCheckList">
-          <ul>
-            <li> <input type="checkbox" name="checkbox" id="checkbox"> <span class="checkmark"></span>Lorem ipsum dolor sit amet.</li>
-            <li> <input type="checkbox" name="checkbox" id="checkbox"> <span class="checkmark"></span>Lorem ipsum dolor sit amet.</li>
-            <li> <input type="checkbox" name="checkbox" id="checkbox"> <span class="checkmark"></span>Lorem ipsum dolor sit amet.</li>
-            <li> <input type="checkbox" name="checkbox" id="checkbox"> <span class="checkmark"></span>Lorem ipsum dolor sit amet.</li>
-            <li> <input type="checkbox" name="checkbox" id="checkbox"> <span class="checkmark"></span>Lorem ipsum dolor sit amet.</li>
+          <h2 id="emptyTask" class="emptyTask">You don't have any tasks!</h2>
+          <ul id="listMyTasks">
+            <!--<li> <input type="checkbox" name="checkbox" id="checkbox"><label for="">Lorem ipsum dolor sit amet.</label></li>
+            <li> <input type="checkbox" name="checkbox" id="checkbox"><label for="">Lorem ipsum dolor sit amet.</label></li>
+            <li> <input type="checkbox" name="checkbox" id="checkbox"><label for="">Lorem ipsum dolor sit amet.</label></li>
+            <li> <input type="checkbox" name="checkbox" id="checkbox"><label for="">Lorem ipsum dolor sit amet.</label></li>
+            <li> <input type="checkbox" name="checkbox" id="checkbox"><label for="">Lorem ipsum dolor sit amet.</label></li>-->
           </ul>
+        </div>
+
+        <!-- PLACE FOR TASKS CLOSED-->
+        <div class="tasksClosed">
+          <h2 class="titleTasksClosed">Tasks Closed</h2>
+
+          <a href="#"><span class="numberTasksClosed">9</span></a>
         </div>
       </div>
       
-      <div class="taksNewTasks border-r">
+      <!-- SPACE FOR THE NEW TASKS -->
+      <div class="newTasks border-r">
         <h2>New Tasks</h2>
+
+        <div class="joinTasks">
+          <input type="text" name="myTask" id="myTask" placeholder="Name your task">
+
+          <button onclick="callMyTask()" id="submit" type="submit">Add Task</button>
+        </div>
       </div>
     </div>
 

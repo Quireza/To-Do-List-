@@ -6,45 +6,26 @@
 }
 
 main {
-  width: 700px;
+  width: 800px;
+  height: 100vh;
   border-radius: 20px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
   background-color: #D0D8FF;
   height: auto;
   margin: 0 auto;
-  margin-top: 2%;
+  margin-top: 1%;
 }
 
 li {
   list-style: none;
 }
 
-main input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
+input[type="text"] {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 10px 40px;
 
-.checkmark {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 50%;
 }
-
-.checkmark:hover {
-  cursor: pointer;
-}
-
-.tasksCheckList input:checked ~ .checkmark {
-  background-color: #4bda12;
-}
-
 
 .border-r {
   border-radius: 20px;
@@ -67,15 +48,63 @@ main input {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding: 20px 40px;
+}
+
+.tasksAll .tasksMine h2 {
+  text-align: center;
+}
+
+.tasksAll .tasksMine .emptyTask {
+  margin: 20px 0;
+  color: #e66108;
+}
+
+.tasksAll .tasksMine .tasksClosed {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tasksAll .tasksMine .tasksClosed span {
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.tasksAll .tasksMine .tasksClosed a {
+  list-style: none;
+}
+
+.tasksAll .tasksMine .tasksCheckList li {
+  display: flex;
+  gap: 10px;
 }
 
 .tasksAll .tasksMine .tasksCheckList li{
   position: relative;
-  padding: 10px 50px;
+  padding: 10px 20px;
   border: 1px solid black;
   border-radius: 20px;
   margin: 40px 0;
   background-color: #D9D9D9;
+}
+
+.newTasks {
+  padding: 20px 40px;
+}
+
+.newTasks .joinTasks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+.newTasks .joinTasks button {
+  border-radius: 20px;
+  border: 1px solid black;
+  padding: 10px 40px;
+  cursor: pointer;
 }
