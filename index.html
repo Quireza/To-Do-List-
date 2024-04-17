@@ -13,7 +13,7 @@
 </head>
 <body>
 
-  <main>
+  <main class="mainContainer">
     <h1 class="titleTasks">Tasks</h1>
 
     <div class="tasksAll">
@@ -25,11 +25,7 @@
         <div class="tasksCheckList">
           <h2 id="emptyTask" class="emptyTask">You don't have any tasks!</h2>
           <ul id="listMyTasks">
-            <!--<li> <input type="checkbox" name="checkbox" id="checkbox"><label for="">Lorem ipsum dolor sit amet.</label></li>
-            <li> <input type="checkbox" name="checkbox" id="checkbox"><label for="">Lorem ipsum dolor sit amet.</label></li>
-            <li> <input type="checkbox" name="checkbox" id="checkbox"><label for="">Lorem ipsum dolor sit amet.</label></li>
-            <li> <input type="checkbox" name="checkbox" id="checkbox"><label for="">Lorem ipsum dolor sit amet.</label></li>
-            <li> <input type="checkbox" name="checkbox" id="checkbox"><label for="">Lorem ipsum dolor sit amet.</label></li>-->
+
           </ul>
         </div>
 
@@ -37,7 +33,7 @@
         <div class="tasksClosed">
           <h2 class="titleTasksClosed">Tasks Closed</h2>
 
-          <a href="#"><span class="numberTasksClosed">9</span></a>
+          <a onclick="showTasksCLosed()" id="numberTasksClosed" href="#"><span class="numberTasksClosed">0</span></a>
         </div>
       </div>
       
@@ -54,6 +50,10 @@
     </div>
 
   </main>
+  
+  <div id="containerClosed" class="containerTasksClosed mainContainer">
+    <h2 class="titleTasks">Tasks Closed</h2>
+  </div>
   
 </body>
 </html>

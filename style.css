@@ -5,7 +5,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-main {
+.mainContainer {
   width: 800px;
   height: 100vh;
   border-radius: 20px;
@@ -65,16 +65,20 @@ input[type="text"] {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 
-.tasksAll .tasksMine .tasksClosed span {
+/*.tasksAll .tasksMine .tasksClosed span {
   border: 1px solid black;
   border-radius: 50%;
   padding: 10px;
-}
+}*/
 
 .tasksAll .tasksMine .tasksClosed a {
-  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  border-bottom: 1px solid black;
 }
 
 .tasksAll .tasksMine .tasksCheckList li {
@@ -107,4 +111,8 @@ input[type="text"] {
   border: 1px solid black;
   padding: 10px 40px;
   cursor: pointer;
+}
+
+.containerTasksClosed {
+  display: none;
 }
