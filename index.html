@@ -33,7 +33,7 @@
         <div class="tasksClosed">
           <h2 class="titleTasksClosed">Tasks Closed</h2>
 
-          <a onclick="showTasksCLosed()" id="numberTasksClosed" href="#"><span class="numberTasksClosed">0</span></a>
+          <a onclick="showTasksClosed()" id="numberTasksClosed" href="#"><span class="numberTasksClosed">0</span></a>
         </div>
       </div>
       
@@ -42,8 +42,8 @@
         <h2>New Tasks</h2>
 
         <div class="joinTasks">
-          <input type="text" name="myTask" id="myTask" placeholder="Name your task">
-
+          <input type="text" name="myTask" id="myTask" placeholder="Name your task...">
+          <input style="height: 100px;" type="text" name="myTask" id="myTask" placeholder="Describe your task here...">
           <button onclick="callMyTask()" id="submit" type="submit">Add Task</button>
         </div>
       </div>
@@ -53,6 +53,12 @@
   
   <div id="containerClosed" class="containerTasksClosed mainContainer">
     <h2 class="titleTasks">Tasks Closed</h2>
+    
+    <div>
+      <ul id="listTasksClosed">
+
+      </ul>
+    </div>
   </div>
   
 </body>

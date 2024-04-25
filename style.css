@@ -5,12 +5,16 @@
   font-family: 'Poppins', sans-serif;
 }
 
+h1, h2, h3, p {
+  color: white;
+}
+
 .mainContainer {
   width: 800px;
   height: 100vh;
   border-radius: 20px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
-  background-color: #D0D8FF;
+  background-color: #EC5255;
   height: auto;
   margin: 0 auto;
   margin-top: 1%;
@@ -21,7 +25,7 @@ li {
 }
 
 input[type="text"] {
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 20px;
   padding: 10px 40px;
 
@@ -29,7 +33,7 @@ input[type="text"] {
 
 .border-r {
   border-radius: 20px;
-  border: 1px solid black;
+  border: 1px solid white;
 }
 
 .titleTasks {
@@ -57,7 +61,7 @@ input[type="text"] {
 
 .tasksAll .tasksMine .emptyTask {
   margin: 20px 0;
-  color: #e66108;
+  color: #000000;
 }
 
 .tasksAll .tasksMine .tasksClosed {
@@ -69,16 +73,16 @@ input[type="text"] {
 }
 
 /*.tasksAll .tasksMine .tasksClosed span {
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 50%;
   padding: 10px;
 }*/
 
 .tasksAll .tasksMine .tasksClosed a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 20px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
 }
 
 .tasksAll .tasksMine .tasksCheckList li {
@@ -89,7 +93,7 @@ input[type="text"] {
 .tasksAll .tasksMine .tasksCheckList li{
   position: relative;
   padding: 10px 20px;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 20px;
   margin: 40px 0;
   background-color: #D9D9D9;
@@ -108,11 +112,20 @@ input[type="text"] {
 
 .newTasks .joinTasks button {
   border-radius: 20px;
-  border: 1px solid black;
+  border: 1px solid white;
   padding: 10px 40px;
   cursor: pointer;
 }
 
 .containerTasksClosed {
+  padding: 20px;
   display: none;
+}
+
+.containerTasksClosed .titleTasks {
+  padding: 20px 0;
+}
+
+.containerTasksClosed p, li {
+  color: white;
 }

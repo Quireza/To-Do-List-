@@ -1,4 +1,5 @@
 const tasks = [];
+let tasksClosed = [];
 let count = 0;
 
 function callMyTask() {
@@ -21,7 +22,8 @@ function callMyTask() {
 
         let taskIndex = tasks.indexOf(label.textContent);
         if (taskIndex !== -1) {
-          tasks.splice(taskIndex, 1);
+          tasksClosed.push(tasks.splice(taskIndex, 1));
+
           count += 1;
           numberTasksClosed.textContent = count;
         }
@@ -51,18 +53,31 @@ function callMyTask() {
 
     }
 
-    console.log(tasks);
-    console.log(count);
-
     document.getElementById('myTask').value = '';
   })
 }
 
 
-function showTasksCLosed() {
+function showTasksClosed() {
   numberTasksClosed.addEventListener('click', () => {
     let containerClosed = document.getElementById('containerClosed');
+    let emptyTasksClosed = document.createElement('p');
+    let listTasksClosed = document.getElementById('listTasksClosed');
 
+    listTasksClosed.innerHTML = '';
+
+      for (let i = 0; i < tasksClosed.length; i++) {
+        let myListTaskClosed = document.createElement('li');
+        myListTaskClosed.textContent = tasksClosed[i];
+        listTasksClosed.appendChild(myListTaskClosed);
+      }
+    
     containerClosed.style.display = 'block';
+    
+    if (count == 0) {
+      emptyTasksClosed.textContent = "You don't have any tasks closed already.";
+    } else {
+      return;
+    }
   })
 }
